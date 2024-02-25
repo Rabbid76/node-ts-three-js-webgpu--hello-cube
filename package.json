@@ -1,5 +1,5 @@
 {
-  "name": "node-ts-three-js-hello-cube",
+  "name": "node-ts-three-js-webgpu--hello-cube",
   "version": "1.0.0",
   "description": "",
   "scripts": {

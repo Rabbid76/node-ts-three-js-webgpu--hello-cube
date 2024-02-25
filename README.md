@@ -1,3 +1,3 @@
-# node-ts-three-js--hello-cube
+# node-ts-three-js-webgpu--hello-cube
 
-Node.js, TypeScript, Three.js Boilerplate
+Node.js, TypeScript, Three.js, WebGPU Boilerplate
