@@ -207,7 +207,7 @@ export const helloCube = (canvas: HTMLCanvasElement) => {
   );
 
   const render = () => {
-    void renderer.render(scene, camera);
+    void renderer.renderAsync(scene, camera);
   };
   requestAnimationFrame(animate);
 };
