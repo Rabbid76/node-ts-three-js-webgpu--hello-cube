@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unsafe-call */
 import type { Texture } from 'three';
 import {
   AmbientLight,
@@ -23,7 +24,7 @@ import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import { EXRLoader } from 'three/examples/jsm/loaders/EXRLoader';
 import { RGBELoader } from 'three/examples/jsm/loaders/RGBELoader';
 import Stats from 'three/examples/jsm/libs/stats.module';
-import WebGPURenderer from 'three/examples/jsm/renderers/webgpu/WebGPURenderer.js';
+import WebGPURenderer from 'three/src/renderers/webgpu/WebGPURenderer.js';
 import { GUI } from 'dat.gui';
 
 export const helloCube = (canvas: HTMLCanvasElement) => {
@@ -45,6 +46,7 @@ export const helloCube = (canvas: HTMLCanvasElement) => {
   );
   camera.position.y = 4;
   camera.position.z = 8;
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
   const controls = new OrbitControls(camera, renderer.domElement);
 
   const exrLoader = new EXRLoader();
@@ -67,6 +69,7 @@ export const helloCube = (canvas: HTMLCanvasElement) => {
   scene.add(directionalLight);
   const lightTransformControl = new TransformControls(
     camera,
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
     renderer.domElement
   );
   lightTransformControl.addEventListener('dragging-changed', (event: any) => {
@@ -94,6 +97,7 @@ export const helloCube = (canvas: HTMLCanvasElement) => {
   meshGroup.add(mesh);
   const meshTransformControl = new TransformControls(
     camera,
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
     renderer.domElement
   );
   meshTransformControl.addEventListener('dragging-changed', (event: any) => {
