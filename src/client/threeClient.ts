@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unsafe-call */
 import type { Texture } from 'three';
 import {
   AmbientLight,
@@ -46,7 +45,7 @@ export const helloCube = (canvas: HTMLCanvasElement) => {
   );
   camera.position.y = 4;
   camera.position.z = 8;
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
+
   const controls = new OrbitControls(camera, renderer.domElement);
 
   const exrLoader = new EXRLoader();
@@ -69,7 +68,7 @@ export const helloCube = (canvas: HTMLCanvasElement) => {
   scene.add(directionalLight);
   const lightTransformControl = new TransformControls(
     camera,
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
+
     renderer.domElement
   );
   lightTransformControl.addEventListener('dragging-changed', (event: any) => {
@@ -97,7 +96,7 @@ export const helloCube = (canvas: HTMLCanvasElement) => {
   meshGroup.add(mesh);
   const meshTransformControl = new TransformControls(
     camera,
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
+
     renderer.domElement
   );
   meshTransformControl.addEventListener('dragging-changed', (event: any) => {
