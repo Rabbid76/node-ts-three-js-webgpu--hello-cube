@@ -75,8 +75,8 @@ export const helloCube = (canvas: HTMLCanvasElement) => {
     controls.enabled = !event.value;
   });
   lightTransformControl.attach(directionalLight);
-  lightTransformControl.visible = false;
-  scene.add(lightTransformControl);
+  lightTransformControl.getHelper().visible = false;
+  scene.add(lightTransformControl.getHelper());
 
   const groundGeometry = new PlaneGeometry(10, 10);
   groundGeometry.rotateX(-Math.PI / 2);
@@ -103,22 +103,26 @@ export const helloCube = (canvas: HTMLCanvasElement) => {
     controls.enabled = !event.value;
   });
   meshTransformControl.attach(meshGroup);
-  meshTransformControl.visible = false;
-  scene.add(meshTransformControl);
+  meshTransformControl.getHelper().visible = false;
+  scene.add(meshTransformControl.getHelper());
 
   const stats = new Stats();
   document.body.appendChild(stats.dom);
   const gui = new GUI();
   const uiProperties = {
-    'mesh transform control': meshTransformControl.visible,
-    'light transform control': lightTransformControl.visible,
+    'mesh transform control': meshTransformControl.getHelper().visible,
+    'light transform control': lightTransformControl.getHelper().visible,
   };
   gui
     .add(uiProperties, 'mesh transform control')
-    .onChange((value: any) => (meshTransformControl.visible = value));
+    .onChange(
+      (value: any) => (meshTransformControl.getHelper().visible = value)
+    );
   gui
     .add(uiProperties, 'light transform control')
-    .onChange((value: any) => (lightTransformControl.visible = value));
+    .onChange(
+      (value: any) => (lightTransformControl.getHelper().visible = value)
+    );
 
   window.addEventListener(
     'resize',
