@@ -1,13 +1,2 @@
-.devcontainer
-.vscode
-beta
-dist/client/**/*.js
-dist/server
-patches
-resource
-node_modules
-built
-output
-*.js
-*.json
-*.md
+node_modules/
+dist/

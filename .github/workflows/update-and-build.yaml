@@ -29,19 +29,24 @@ jobs:
         run: |-
           echo $CURRENT_DATE
           echo "node version: $(node --version) $(which node)"
-          echo "npw version: $(npm --version) $(which npm)"
+          echo "npm version: $(npm --version) $(which npm)"
 
       - name: Install ncu 🔀
         run: npm install npm-check-updates
 
-      - name: Upgrade packages 🔀
-        run: npm run update:modules
+      - name: Upgrade packages (ncu) 🔀
+        run: npm run ncu
 
       - name: Prettier and ESLint 🔀
-        run: npm run format
+        run: |-
+          npm run format
+          npm run lint
 
       - name: Build 🔀
         run: npm run build
+
+      - name: Serve 🔀
+        run: npm run serve
 
       - name: Commit and create PR 🔀
         uses: peter-evans/create-pull-request@v6
