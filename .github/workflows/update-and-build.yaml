@@ -45,8 +45,8 @@ jobs:
       - name: Build 🔀
         run: npm run build
 
-      - name: Serve 🔀
-        run: npm run serve
+      #- name: Serve 🔀
+      #  run: npm run serve
 
       - name: Commit and create PR 🔀
         uses: peter-evans/create-pull-request@v6
