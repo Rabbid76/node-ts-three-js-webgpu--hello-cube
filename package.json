@@ -27,20 +27,20 @@
   "homepage": "https://github.com/Rabbid76/threejs-render-poc-2#readme",
   "devDependencies": {
     "@types/dat.gui": "0.7.13",
-    "@types/node": "^24.8.0",
-    "@types/three": "^0.180.0",
-    "@typescript-eslint/eslint-plugin": "^8.46.1",
-    "@typescript-eslint/parser": "^8.46.1",
-    "eslint": "^9.37.0",
+    "@types/node": "^26.2.0",
+    "@types/three": "^0.185.4",
+    "@typescript-eslint/eslint-plugin": "^8.67.0",
+    "@typescript-eslint/parser": "^8.67.0",
+    "eslint": "^10.8.1",
     "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-prettier": "^5.5.4",
-    "npm-check-updates": "^19.1.1",
-    "prettier": "^3.6.2",
-    "typescript": "^5.9.3",
-    "vite": "^7.1.10"
+    "eslint-plugin-prettier": "^5.5.6",
+    "npm-check-updates": "^23.0.2",
+    "prettier": "^3.9.6",
+    "typescript": "^7.0.2",
+    "vite": "^8.2.2"
   },
   "dependencies": {
     "dat.gui": "0.7.9",
-    "three": "^0.180.0"
+    "three": "^0.185.1"
   }
 }
